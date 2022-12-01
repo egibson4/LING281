@@ -7,7 +7,7 @@ import pandas as pd
 # sklearn has accuracy, precision, recall functions
 # his baseline for the lectures was a most frequent classifier: mine will be the basic feldman one
 
-# TODO: train-test split using this package:
+# train-test split using this package:
 # for train_idx, test_idx in KFold(n_splits=10, shuffle=True).split(vowel_data):
 #     train = vowel_data.iloc[train_idx]
 #     test = vowel_data.iloc[test_idx]
@@ -25,7 +25,7 @@ vot_data = vot_data[vot_data['gender'] == 'F']
 # calculate mean and cov for p and b
 vot_means = vot_data.groupby('stop')[['vot']].mean()
 vot_covs = vot_data.groupby('stop')[['vot']].cov()
-# print(vot_means)
+print(vot_means)
 # print(vot_covs)
 
 # x = vot_data['vot'].sample().values[0]
